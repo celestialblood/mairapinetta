@@ -1,0 +1,149 @@
+<!--Maira Pinetta-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+ <!--LINK a BOOTSTRAP-----Se pone ANTES de mi CSS Para que no me lo pise --> 
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+     <!--llamo css-->
+     <link rel="stylesheet" href="../css/main.css">
+ 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <title>Shop</title>
+</head>
+<body>
+
+<img id = "background_home" src="../Images/background_Pinetta.jpg" alt="Background_home">
+
+    <nav>
+
+        <header>
+            <h1>Shop</h1>
+        </header>   
+
+        <ul> <!--lista Navegación -->
+            <li> <!--list item-->
+                <a href="../index.html">Home</a> 
+            </li>
+
+            <li> <!--list item-->
+                <a href="../Pages/portfolio.html">Portfolio</a> 
+            </li>
+
+            <li>
+                <a href="../Pages/about.html">About</a> 
+            </li>
+
+            <li>
+                <a href="../Pages/contact.html">Contact</a> 
+            </li>
+            <div class="icon-cart">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>   
+            </div>  
+        </ul>
+
+ 
+
+    </nav>
+
+    <main class="main-shop">
+
+        <!--Hacer subpaginas de prints y de clothing botones links con imagenes-->   
+
+        <table> <!--etiqueta Tabla (Semanticamente correcto:)-->
+            <thead><!--encabezSado-->
+                <tr> <!--indica la fila -->
+                    <th> PRINTS</th> <!--encabezado-->
+                    <th>  PRICE </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> A4 </td> <!--Contenido tabla fila-->
+                    <td> $400 AR</td>
+                </tr>
+                <tr>
+                    <td> A3 </td>
+                    <td>$1000 AR</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Galeria sin bootstrap-->
+        <div class="prints">
+            <img class="horizontal" src="../Images/Print.jpg" alt="Print_shop" >
+            <img class="vertical" src="../Images/Pinetta_Maira_6974.jpg">
+            <img class= "vertical" src="../Images/MairaPinetta_Balam5.jpg" alt="">       
+        </div>
+
+
+       <!--Gallery carrousel BOOTSTRAP -->
+       <div id="carouselExampleCaptions" class="carousel slide carousel-shop" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner ">
+                
+                <div class="carousel-item active">
+                    <img src="../Images/Print.jpg" class="" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                        <h5>Print</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Images/Pinetta_Maira_6974.jpg" class=" " alt="...">
+                    <div class="carousel-caption  d-md-block">
+                        <h5>6974</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Images/Pinetta_Maira__DSC1365.jpg" class="" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5>DSC1365</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+      </div>
+
+
+
+    </main>
+    
+    <footer>
+        <p>Copyright &copy; 2022    <span>   Maira Pinetta</span>. <img src="../Images/pluto.png"></p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/53cd0afe9d.js" crossorigin="anonymous"></script> 
+
+        <!--link a JS de BOOTSTRAP------Se pone en la ultima parte para que se ejecute después de cargar la página por Optimización-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
