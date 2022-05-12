@@ -1,0 +1,118 @@
+/*------------------NAV_BAR------------------*/
+
+/*-------TRANSICION--------*/
+
+nav:hover{
+    background-color: #ffffff17;
+    transition-duration:1s ;
+}
+
+header h1{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    color: white; 
+    font-size:x-large;
+}
+
+nav{
+    padding: 1vw;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    align-items: center ;
+
+    position: sticky;
+    top: 0;
+}
+
+nav ul{    
+    display: flex;
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    list-style: none; 
+    z-index:10;
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    color: white;;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: #ffffff;
+}
+
+a:hover {
+    color: #de90ff;
+}
+
+
+.icon-insta img{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+}
+
+.icon-cart img {
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    
+} 
+
+
+/*-------FOOTER----------*/
+
+footer{
+ padding: 1%;
+ display: flex;
+
+ justify-self: center;
+ justify-content: center;
+ align-content:space-around;
+   
+/*mobile*/margin-top: 10vh;
+ text-decoration: none;   
+ font-family: 'Dosis', sans-serif;
+ font-weight: 300;
+ color: white;
+    img{
+        height: 2.7vh;
+        filter: invert(1);
+    }
+
+    &:hover{
+        background-color: #ffffff17;
+        transition-duration:1s ;
+    
+    }
+
+}
+
+
+/*DESKTOP*/
+@media screen and (min-width: 1024px){ 
+    footer{
+        margin-top: 0;
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+        align-content:space-around;
+    }
+
+}
