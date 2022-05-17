@@ -234,10 +234,10 @@ table {
   align-items: center; }
 
 form {
+  margin: 3vw auto;
   display: grid;
   grid-template-columns: 2fr;
   justify-content: space-evenly;
-  margin: 5vh auto;
   height: fit-content;
   background: #ffffff52;
   text-align: center; }
@@ -262,7 +262,7 @@ form {
 
 /* CONTACTO IZQUIERDA */
 textarea, input {
-  margin: 0.5vh;
+  margin: 0.5vh auto;
   min-height: 5vh;
   min-width: 60vw;
   max-width: 60vw;
@@ -271,8 +271,8 @@ textarea, input {
 
 .button-contact {
   font-family: 'Dosis', sans-serif;
-  font-size: x-large;
-  font-weight: 300;
+  font-size: large;
+  text-align: center;
   color: #ffff;
   border-color: #de90ff;
   margin: 0.5vh;
@@ -289,13 +289,12 @@ textarea, input {
 
 /* CONTACTO DERECHA */
 .contact-list {
-  margin: 0 auto;
+  margin: 3vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  max-width: 50vw;
   height: 40vh;
   list-style-type: none; }
   .contact-list ul {
@@ -337,7 +336,7 @@ textarea, input {
 /*no funciona hover en img como cambiar color como a iconos */
 /*------------ABOUT-------------*/
 .card {
-  margin: 4vw auto;
+  margin: 3vw auto;
   /*centra el elemento / top /bottom es 0 y left/right auto (set automatico dependiendo del browser basado en el contenedor)*/
   padding: 10vh 10vw;
   height: fit-content;
@@ -417,15 +416,13 @@ h2 {
     align-content: space-around; }
   /*-----------ABOUT ---------*/
   .card {
-    padding: 10vh 10vw;
     height: 60vh;
     width: 60vw;
+    align-content: center;
     text-align: center;
-    background-color: #ffffff52;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: center;
     justify-content: space-evenly; }
   /*------------SHOP-----------*/
   table {
@@ -454,29 +451,31 @@ h2 {
     height: 100vh;
     max-width: 100%; }
   .social-media {
-    margin-top: 10vh;
+    margin-top: 0;
     font-size: 2.5vw; }
   .nft {
     filter: invert(1); }
   /*---------CONTACT --------------*/
   form {
-    grid-template-columns: 2fr 2fr;
-    justify-content: center;
-    align-content: center;
     height: 60vh;
-    width: 60vw; }
+    width: 60vw;
+    align-content: center;
+    grid-template-columns: 2fr 2fr; }
   .contact-form {
-    margin: 4vw;
+    margin: 3vw auto;
     flex-direction: row;
-    min-width: 25vw;
-    max-width: 25vw; }
+    min-width: fit-content;
+    max-width: fit-content;
+    justify-content: center; }
   input {
+    margin: 0.5vh auto;
     justify-self: center;
     min-height: 5vh;
     max-height: 5vh;
     min-width: 25vw;
     max-width: 25vw; }
   textarea {
+    margin: 0.5vh;
     justify-self: center;
     min-height: 2vh;
     max-height: 20vh;
@@ -490,13 +489,9 @@ h2 {
     max-width: 25vw; }
   /* CONTACTO DERECHA */
   .contact-list {
-    margin: 4vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    margin: 10vw auto;
     max-width: 25vw;
-    height: 40vh;
+    height: fit-content;
     text-align: left;
     padding-left: 0; }
   /*---------PORTFOLIO------------*/

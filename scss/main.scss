@@ -1,7 +1,7 @@
 @import "nav&footer";
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@500&display=swap');
 
-$margin:4vw;
+$margin:3vw;
 $padding:4vw;
 
 
@@ -12,6 +12,13 @@ $padding:4vw;
 }  
 
 
+@mixin container_desktop (){
+
+    height: 60vh;
+    width: 60vw;
+
+    align-content: center;
+}
 /*----------------MOBILE FIRST------------------*/
 
 /*--------------------HOME-----------------------*/
@@ -203,14 +210,12 @@ table{
 
 
 form{
-
+    margin: $margin auto;
     display: grid;
     grid-template-columns: 2fr;
     justify-content: space-evenly;
     
-    margin: 5vh auto;
     height: fit-content;
-
 
     background: #ffffff52;
     text-align: center;
@@ -226,7 +231,6 @@ form{
 }
 
 .contact-form{
-
     margin: 2vh auto;
     display: flex;
     flex-wrap: wrap;
@@ -244,7 +248,7 @@ form{
 /* CONTACTO IZQUIERDA */
 
 textarea, input{ 
-    margin: 0.5vh;
+    margin: 0.5vh auto;
     min-height: 5vh;
     min-width: 60vw;
     max-width: 60vw;
@@ -255,8 +259,8 @@ textarea, input{
 
 .button-contact{
     font-family: 'Dosis', sans-serif;
-    font-size: x-large;
-    font-weight: 300;
+    font-size:large;
+    text-align: center;
     color:#ffff;
     border-color: #de90ff;
 
@@ -280,13 +284,12 @@ textarea, input{
 /* CONTACTO DERECHA */
 
 .contact-list {
-    margin: 0 auto;
+    margin:$margin;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    max-width: 50vw;
     height: 40vh;
     list-style-type: none;
 
@@ -486,17 +489,13 @@ h2{
 
     .card{
        
-        padding: 10vh 10vw;
-        height: 60vh;
-        width: 60vw;
+        @include container_desktop();
+
         text-align: center;
-        background-color: #ffffff52;
-
-
+  
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        align-content: center;
         justify-content: space-evenly;
 
     }
@@ -544,7 +543,7 @@ h2{
     }
     
     .social-media {
-        margin-top: 10vh;
+        margin-top: 0;
         font-size: 2.5vw;
     }
     
@@ -558,24 +557,24 @@ h2{
         
 
     form{
-        grid-template-columns: 2fr 2fr;
-        justify-content: center;
-        align-content: center;
+        @include container_desktop();
 
-        height: 60vh;
-        width: 60vw;
+        grid-template-columns: 2fr 2fr;
+
     }
 
     .contact-form{
-        margin: $margin;
+        margin: $margin auto;
         flex-direction: row;
-        min-width: 25vw;
-        max-width: 25vw;
+        min-width: fit-content;
+        max-width: fit-content;
+        justify-content: center;
 
     }
 
 
     input{ 
+        margin: 0.5vh auto ;
         justify-self: center;
         min-height: 5vh;
         max-height: 5vh;
@@ -584,6 +583,7 @@ h2{
     }
 
     textarea{
+        margin: 0.5vh ;
         justify-self: center;
         min-height: 2vh;
         max-height: 20vh;
@@ -604,15 +604,10 @@ h2{
     /* CONTACTO DERECHA */
 
     .contact-list {
-        margin: $margin;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-
+        margin: 10vw auto;
+ 
         max-width: 25vw;
-        height: 40vh;
-
+        height: fit-content;
         text-align: left;
         padding-left: 0;
 
