@@ -3,7 +3,8 @@
 
 $margin:3vw;
 $padding:4vw;
-
+$height:60vh;
+$width:60vw;
 
 *{/*Con esto  elimino lo que esta por defecto y no se me suma a lo que yo setee*/
     margin:0;
@@ -12,10 +13,10 @@ $padding:4vw;
 }  
 
 
-@mixin container_desktop (){
+@mixin container_desktop ($height, $width){
 
-    height: 60vh;
-    width: 60vw;
+    height: $height;
+    width: $width;
 
     align-content: center;
 }
@@ -428,11 +429,10 @@ h2{
     }
     
     .icon-cart {
-        font-size: 4vh;
-        display: flex;
-        flex-wrap: wrap;
+        @extend .icon-insta;
 
     } 
+    
     body{
         display: flex;
         flex-direction: none;
@@ -489,7 +489,7 @@ h2{
 
     .card{
        
-        @include container_desktop();
+        @include container_desktop($height, $width);
 
         text-align: center;
   
@@ -511,18 +511,13 @@ h2{
 /*--------------------------------------------------------DESKTOP------------------------------------------------------*/
 @media screen and (min-width: 1024px){ 
     .icon-insta{
-        font-size: 4vh;
-        display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         justify-content: flex-end
         
     }
     
-    .icon-cart {
-        font-size: 4vh;
-        display: flex;
-        flex-wrap: wrap;
+    .icon-cart { 
+        @extend .icon-insta;
 
     } 
     
@@ -557,7 +552,7 @@ h2{
         
 
     form{
-        @include container_desktop();
+        @include container_desktop($height, $width);
 
         grid-template-columns: 2fr 2fr;
 
@@ -583,6 +578,7 @@ h2{
     }
 
     textarea{
+   
         margin: 0.5vh ;
         justify-self: center;
         min-height: 2vh;
