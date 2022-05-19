@@ -1,10 +1,9 @@
+
+@import "variables";
 @import "nav&footer";
+
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@500&display=swap');
 
-$margin:3vw;
-$padding:4vw;
-$height:60vh;
-$width:60vw;
 
 *{/*Con esto  elimino lo que esta por defecto y no se me suma a lo que yo setee*/
     margin:0;
@@ -17,9 +16,15 @@ $width:60vw;
 
     height: $height;
     width: $width;
-
     align-content: center;
 }
+
+
+@mixin tipografia ($colorfont, $font){
+    font-family: $font;
+    color:$colorfont;
+}
+
 /*----------------MOBILE FIRST------------------*/
 
 /*--------------------HOME-----------------------*/
@@ -128,9 +133,7 @@ overflow-x: hidden;}
     /* background-color: #de90ff; */
     text-align: center;
     font-size:x-large;
-    font-family: 'Dosis', sans-serif;
-    color: white; 
-
+    @include tipografia( $colorfont, $font);
 
     animation: updownfadein 4s ;
 
@@ -170,9 +173,9 @@ table{
     width: 80vw;
 
     text-align: center;
-    font-family: 'Dosis', sans-serif;
     font-weight: 200;
-    color: #ffffff;
+    @include tipografia( $colorfont, $font);
+
 
     background-color: #ffffff52;
     border-collapse: collapse;
@@ -222,11 +225,11 @@ form{
     text-align: center;
 
     h3{
-    
-        font-family: 'Dosis', sans-serif;
         font-size: x-large;
         font-weight: 300;
-        color: #ffffff;
+        @include tipografia( $colorfont, $font);
+
+    
     }
 
 }
@@ -259,10 +262,11 @@ textarea, input{
 }
 
 .button-contact{
-    font-family: 'Dosis', sans-serif;
+
+    @include tipografia( $colorfont, $font);
+
     font-size:large;
     text-align: center;
-    color:#ffff;
     border-color: #de90ff;
 
     margin: 0.5vh;
@@ -306,9 +310,10 @@ textarea, input{
             text-decoration: none;
            
             span{
-                font: 300 18px 'Dosis', sans-serif;
-                letter-spacing: 1.9px;
-                color: rgb(255, 255, 255);     
+                @include tipografia( $colorfont, $font);
+
+                font: 300 18px ;
+                letter-spacing: 1.9px;  
                 margin-left: 2vw;
         
             }
@@ -368,9 +373,9 @@ textarea, input{
 
 
 p{
-    font: 300 18px 'Dosis', sans-serif;
+    font: 300 18px;
     letter-spacing: 1.9px;
-    color: #ffffff;
+    @include tipografia( $colorfont, $font);
 
 }
 
@@ -420,7 +425,7 @@ h2{
         }
     }
 
-    .icon-insta{
+    .icon-insta, .icon-cart{
         font-size: 4vh;
         display: flex;
         flex-wrap: wrap;
@@ -428,10 +433,6 @@ h2{
         
     }
     
-    .icon-cart {
-        @extend .icon-insta;
-
-    } 
     
     body{
         display: flex;
@@ -492,7 +493,6 @@ h2{
         @include container_desktop($height, $width);
 
         text-align: center;
-  
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -510,16 +510,12 @@ h2{
 
 /*--------------------------------------------------------DESKTOP------------------------------------------------------*/
 @media screen and (min-width: 1024px){ 
-    .icon-insta{
+
+    .icon-insta, .icon-cart{
         flex-direction: column;
-        justify-content: flex-end
+        justify-content: flex-end;
         
     }
-    
-    .icon-cart { 
-        @extend .icon-insta;
-
-    } 
     
 
     body{

@@ -11,9 +11,9 @@ header h1 {
   text-decoration: none;
   padding-bottom: 2vh;
   padding-top: 2vh;
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
+  color: #ffff;
   font-weight: 300;
-  color: white;
   font-size: x-large; }
 
 nav {
@@ -38,9 +38,9 @@ nav ul {
 nav a {
   text-transform: uppercase;
   text-decoration: none;
-  font-family: 'Dosis', sans-serif;
-  font-weight: 300;
-  color: white; }
+  font-family: "Dosis", sans-serif;
+  color: #ffff;
+  font-weight: 300; }
 
 a {
   text-decoration: none;
@@ -50,12 +50,7 @@ a {
 a:hover {
   color: #de90ff; }
 
-.icon-insta img {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; }
-
-.icon-cart img {
+.icon-insta img, .icon-cart img {
   display: flex;
   flex-wrap: wrap;
   align-items: center; }
@@ -70,9 +65,9 @@ footer {
   /*mobile*/
   margin-top: 10vh;
   text-decoration: none;
-  font-family: 'Dosis', sans-serif;
-  font-weight: 300;
-  color: white; }
+  font-family: "Dosis", sans-serif;
+  color: #ffff;
+  font-weight: 300; }
   footer img {
     height: 2.7vh;
     filter: invert(1); }
@@ -182,8 +177,8 @@ body {
   /* background-color: #de90ff; */
   text-align: center;
   font-size: x-large;
-  font-family: 'Dosis', sans-serif;
-  color: white;
+  font-family: "Dosis", sans-serif;
+  color: #ffff;
   animation: updownfadein 4s; }
 
 /*---------------------------------------------------*/
@@ -208,9 +203,9 @@ table {
   height: 30vh;
   width: 80vw;
   text-align: center;
-  font-family: 'Dosis', sans-serif;
   font-weight: 200;
-  color: #ffffff;
+  font-family: "Dosis", sans-serif;
+  color: #ffff;
   background-color: #ffffff52;
   border-collapse: collapse; }
   table th {
@@ -242,10 +237,10 @@ form {
   background: #ffffff52;
   text-align: center; }
   form h3 {
-    font-family: 'Dosis', sans-serif;
     font-size: x-large;
     font-weight: 300;
-    color: #ffffff; }
+    font-family: "Dosis", sans-serif;
+    color: #ffff; }
 
 .contact-form {
   margin: 2vh auto;
@@ -270,10 +265,10 @@ textarea, input {
   border-color: transparent; }
 
 .button-contact {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
+  color: #ffff;
   font-size: large;
   text-align: center;
-  color: #ffff;
   border-color: #de90ff;
   margin: 0.5vh;
   min-height: 2.5vh;
@@ -305,9 +300,10 @@ textarea, input {
       color: white;
       text-decoration: none; }
       .contact-list ul li span {
-        font: 300 18px 'Dosis', sans-serif;
+        font-family: "Dosis", sans-serif;
+        color: #ffff;
+        font: 300 18px;
         letter-spacing: 1.9px;
-        color: white;
         margin-left: 2vw; }
       .contact-list ul li:hover {
         color: #de90ff;
@@ -345,9 +341,10 @@ textarea, input {
   background-color: #ffffff52; }
 
 p {
-  font: 300 18px 'Dosis', sans-serif;
+  font: 300 18px;
   letter-spacing: 1.9px;
-  color: #ffffff; }
+  font-family: "Dosis", sans-serif;
+  color: #ffff; }
 
 h2 {
   font-family: 'Dosis', sans-serif;
@@ -376,11 +373,7 @@ h2 {
       justify-content: space-evenly;
       align-content: center;
       align-items: center; }
-  .icon-insta {
-    font-size: 4vh;
-    display: flex;
-    flex-wrap: wrap; }
-  .icon-cart {
+  .icon-insta, .icon-cart {
     font-size: 4vh;
     display: flex;
     flex-wrap: wrap; }
@@ -431,16 +424,9 @@ h2 {
 /*FIN TABLET*/
 /*--------------------------------------------------------DESKTOP------------------------------------------------------*/
 @media screen and (min-width: 1024px) {
-  .icon-insta {
-    font-size: 4vh;
-    display: flex;
-    flex-wrap: wrap;
+  .icon-insta, .icon-cart {
     flex-direction: column;
     justify-content: flex-end; }
-  .icon-cart {
-    font-size: 4vh;
-    display: flex;
-    flex-wrap: wrap; }
   body {
     display: flex;
     flex-direction: none;

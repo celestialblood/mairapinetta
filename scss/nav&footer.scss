@@ -1,3 +1,10 @@
+
+@import "variables";
+@mixin tipografia ($colorfont, $font){
+    font-family: $font;
+    color:$colorfont;
+}
+
 /*------------------NAV_BAR------------------*/
 
 /*-------TRANSICION--------*/
@@ -12,9 +19,9 @@ header h1{
     text-decoration: none;
     padding-bottom: 2vh;
     padding-top: 2vh;
-    font-family: 'Dosis', sans-serif;
+
+    @include tipografia( $colorfont, $font);
     font-weight: 300;
-    color: white; 
     font-size:x-large;
 }
 
@@ -43,10 +50,9 @@ nav ul{
 nav a {
     text-transform: uppercase;
     text-decoration: none;
-    
-    font-family: 'Dosis', sans-serif;
+
+    @include tipografia( $colorfont, $font);
     font-weight: 300;
-    color: white;;
 }
 
 a {
@@ -60,20 +66,13 @@ a:hover {
 }
 
 
-.icon-insta img{
+.icon-insta img, .icon-cart img{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 
-
 }
 
-.icon-cart img {
-    display: flex;
-    flex-wrap:wrap;
-    align-items: center;
-    
-} 
 
 
 /*-------FOOTER----------*/
@@ -88,9 +87,10 @@ footer{
    
 /*mobile*/margin-top: 10vh;
  text-decoration: none;   
- font-family: 'Dosis', sans-serif;
+
+ @include tipografia( $colorfont, $font);
  font-weight: 300;
- color: white;
+
     img{
         height: 2.7vh;
         filter: invert(1);
