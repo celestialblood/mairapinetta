@@ -5,11 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@500&display=swap');
 
 
+
 *{/*Con esto  elimino lo que esta por defecto y no se me suma a lo que yo setee*/
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }  
+
+$font-sizes: (
+    social-media-mobile: 10vw,
+    muygrande: x-large,
+    grande:large,
+);
 
 
 @mixin container_desktop ($height, $width){
@@ -17,8 +24,7 @@
     height: $height;
     width: $width;
     align-content: center;
-}
-
+}   
 
 @mixin tipografia ($colorfont, $font){
     font-family: $font;
@@ -87,7 +93,7 @@ overflow-x: hidden;}
 
 .contact{
     /* background-color: #de90ff; */
-    justify-self: center;
+    @extend .about;
 } 
 
 .shop{ 
@@ -132,7 +138,7 @@ overflow-x: hidden;}
     justify-content: center;
     /* background-color: #de90ff; */
     text-align: center;
-    font-size:x-large;
+    font-size:map-get($font-sizes, muygrande);
     @include tipografia( $colorfont, $font);
 
     animation: updownfadein 4s ;
@@ -225,7 +231,7 @@ form{
     text-align: center;
 
     h3{
-        font-size: x-large;
+        font-size: map-get($font-sizes, grande);
         font-weight: 300;
         @include tipografia( $colorfont, $font);
 
@@ -265,7 +271,7 @@ textarea, input{
 
     @include tipografia( $colorfont, $font);
 
-    font-size:large;
+    font-size:map-get($font-sizes, grande);
     text-align: center;
     border-color: #de90ff;
 
@@ -310,8 +316,8 @@ textarea, input{
             text-decoration: none;
            
             span{
-                @include tipografia( $colorfont, $font);
-
+                font-family:'Dosis', sans-serif;
+                color: #ffffff;
                 font: 300 18px ;
                 letter-spacing: 1.9px;  
                 margin-left: 2vw;
@@ -334,7 +340,7 @@ textarea, input{
 .social-media {
     width: 100vw; /*seteo ancho contenedor para controlar el spacio de justify*/
     text-align: center;
-    font-size: 10vw;
+    font-size: map-get($font-sizes, social-media-mobile);
     margin-top: 5vh;
     margin-bottom: 10vh;
     margin-left: auto;
@@ -373,17 +379,18 @@ textarea, input{
 
 
 p{
+    font-family: 'Dosis', sans-serif;
+    color: #ffffff;
     font: 300 18px;
     letter-spacing: 1.9px;
-    @include tipografia( $colorfont, $font);
-
+   
 }
 
 h2{
-    font-family: 'Dosis', sans-serif;
-    font-size: x-large;
+    @include tipografia($colorfont, $font );
+    font-size: map-get($font-sizes, muygrande);
     font-weight: 300;
-    color: #ffffff;
+  
 }
 
 
@@ -429,10 +436,7 @@ h2{
         font-size: 4vh;
         display: flex;
         flex-wrap: wrap;
-
-        
     }
-    
     
     body{
         display: flex;
@@ -445,8 +449,8 @@ h2{
         min-height: 100%;
 
         height:none;
-   
     }
+
     .main_home{
         margin-top: 4%;
         height: 100vh;
@@ -457,16 +461,15 @@ h2{
         display: none;
     }
 
-    .container-fluid
-     { display:contents;
-        } 
+    .container-fluid{
+         display:contents;
+    } 
           
 
-     /*imagenes botones */
+    /*imagenes botones */
     #about{
     margin-top: 20%;
     }
-
 
     .social-media {
 
@@ -477,7 +480,6 @@ h2{
         filter: invert(1);
         max-width: 30vw;
     }
-
 
    footer{
     margin-top: 0;

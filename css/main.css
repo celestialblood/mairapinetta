@@ -136,13 +136,12 @@ body {
   grid-template-rows: 2fr 5fr 2fr;
   grid-gap: 10%; }
 
-.about {
+.about, .contact {
   /* background-color: #de90ff; */
   justify-self: center; }
 
 .contact {
-  /* background-color: #de90ff; */
-  justify-self: center; }
+  /* background-color: #de90ff; */ }
 
 .shop {
   /* background-color: #de90ff; */
@@ -237,7 +236,7 @@ form {
   background: #ffffff52;
   text-align: center; }
   form h3 {
-    font-size: x-large;
+    font-size: large;
     font-weight: 300;
     font-family: "Dosis", sans-serif;
     color: #ffff; }
@@ -300,8 +299,8 @@ textarea, input {
       color: white;
       text-decoration: none; }
       .contact-list ul li span {
-        font-family: "Dosis", sans-serif;
-        color: #ffff;
+        font-family: 'Dosis', sans-serif;
+        color: #ffffff;
         font: 300 18px;
         letter-spacing: 1.9px;
         margin-left: 2vw; }
@@ -341,16 +340,16 @@ textarea, input {
   background-color: #ffffff52; }
 
 p {
+  font-family: 'Dosis', sans-serif;
+  color: #ffffff;
   font: 300 18px;
-  letter-spacing: 1.9px;
-  font-family: "Dosis", sans-serif;
-  color: #ffff; }
+  letter-spacing: 1.9px; }
 
 h2 {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
+  color: #ffff;
   font-size: x-large;
-  font-weight: 300;
-  color: #ffffff; }
+  font-weight: 300; }
 
 /*--------------------------------------------MEDIA QUERY ---------------------------------------------------*/
 /*Cambio iconos social media */
