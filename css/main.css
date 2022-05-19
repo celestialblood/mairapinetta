@@ -50,12 +50,7 @@ a {
 a:hover {
   color: #de90ff; }
 
-.icon-insta img {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; }
-
-.icon-cart img {
+.icon-insta img, .icon-cart img {
   display: flex;
   flex-wrap: wrap;
   align-items: center; }
@@ -182,8 +177,8 @@ body {
   /* background-color: #de90ff; */
   text-align: center;
   font-size: x-large;
-  font-family: 'Dosis', sans-serif;
-  color: white;
+  font-family: "Dosis", sans-serif;
+  color: #ffff;
   animation: updownfadein 4s; }
 
 /*---------------------------------------------------*/
@@ -208,9 +203,9 @@ table {
   height: 30vh;
   width: 80vw;
   text-align: center;
-  font-family: 'Dosis', sans-serif;
   font-weight: 200;
-  color: #ffffff;
+  font-family: "Dosis", sans-serif;
+  color: #ffff;
   background-color: #ffffff52;
   border-collapse: collapse; }
   table th {
@@ -234,18 +229,18 @@ table {
   align-items: center; }
 
 form {
+  margin: 3vw auto;
   display: grid;
   grid-template-columns: 2fr;
   justify-content: space-evenly;
-  margin: 5vh auto;
   height: fit-content;
   background: #ffffff52;
   text-align: center; }
   form h3 {
-    font-family: 'Dosis', sans-serif;
     font-size: x-large;
     font-weight: 300;
-    color: #ffffff; }
+    font-family: "Dosis", sans-serif;
+    color: #ffff; }
 
 .contact-form {
   margin: 2vh auto;
@@ -262,7 +257,7 @@ form {
 
 /* CONTACTO IZQUIERDA */
 textarea, input {
-  margin: 0.5vh;
+  margin: 0.5vh auto;
   min-height: 5vh;
   min-width: 60vw;
   max-width: 60vw;
@@ -270,10 +265,10 @@ textarea, input {
   border-color: transparent; }
 
 .button-contact {
-  font-family: 'Dosis', sans-serif;
-  font-size: x-large;
-  font-weight: 300;
+  font-family: "Dosis", sans-serif;
   color: #ffff;
+  font-size: large;
+  text-align: center;
   border-color: #de90ff;
   margin: 0.5vh;
   min-height: 2.5vh;
@@ -289,13 +284,12 @@ textarea, input {
 
 /* CONTACTO DERECHA */
 .contact-list {
-  margin: 0 auto;
+  margin: 3vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  max-width: 50vw;
   height: 40vh;
   list-style-type: none; }
   .contact-list ul {
@@ -306,9 +300,10 @@ textarea, input {
       color: white;
       text-decoration: none; }
       .contact-list ul li span {
-        font: 300 18px 'Dosis', sans-serif;
+        font-family: "Dosis", sans-serif;
+        color: #ffff;
+        font: 300 18px;
         letter-spacing: 1.9px;
-        color: white;
         margin-left: 2vw; }
       .contact-list ul li:hover {
         color: #de90ff;
@@ -337,7 +332,7 @@ textarea, input {
 /*no funciona hover en img como cambiar color como a iconos */
 /*------------ABOUT-------------*/
 .card {
-  margin: 4vw auto;
+  margin: 3vw auto;
   /*centra el elemento / top /bottom es 0 y left/right auto (set automatico dependiendo del browser basado en el contenedor)*/
   padding: 10vh 10vw;
   height: fit-content;
@@ -346,9 +341,10 @@ textarea, input {
   background-color: #ffffff52; }
 
 p {
-  font: 300 18px 'Dosis', sans-serif;
+  font: 300 18px;
   letter-spacing: 1.9px;
-  color: #ffffff; }
+  font-family: "Dosis", sans-serif;
+  color: #ffff; }
 
 h2 {
   font-family: 'Dosis', sans-serif;
@@ -377,11 +373,7 @@ h2 {
       justify-content: space-evenly;
       align-content: center;
       align-items: center; }
-  .icon-insta {
-    font-size: 4vh;
-    display: flex;
-    flex-wrap: wrap; }
-  .icon-cart {
+  .icon-insta, .icon-cart {
     font-size: 4vh;
     display: flex;
     flex-wrap: wrap; }
@@ -417,15 +409,13 @@ h2 {
     align-content: space-around; }
   /*-----------ABOUT ---------*/
   .card {
-    padding: 10vh 10vw;
     height: 60vh;
     width: 60vw;
+    align-content: center;
     text-align: center;
-    background-color: #ffffff52;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: center;
     justify-content: space-evenly; }
   /*------------SHOP-----------*/
   table {
@@ -434,16 +424,9 @@ h2 {
 /*FIN TABLET*/
 /*--------------------------------------------------------DESKTOP------------------------------------------------------*/
 @media screen and (min-width: 1024px) {
-  .icon-insta {
-    font-size: 4vh;
-    display: flex;
-    flex-wrap: wrap;
+  .icon-insta, .icon-cart {
     flex-direction: column;
     justify-content: flex-end; }
-  .icon-cart {
-    font-size: 4vh;
-    display: flex;
-    flex-wrap: wrap; }
   body {
     display: flex;
     flex-direction: none;
@@ -454,29 +437,31 @@ h2 {
     height: 100vh;
     max-width: 100%; }
   .social-media {
-    margin-top: 10vh;
+    margin-top: 0;
     font-size: 2.5vw; }
   .nft {
     filter: invert(1); }
   /*---------CONTACT --------------*/
   form {
-    grid-template-columns: 2fr 2fr;
-    justify-content: center;
-    align-content: center;
     height: 60vh;
-    width: 60vw; }
+    width: 60vw;
+    align-content: center;
+    grid-template-columns: 2fr 2fr; }
   .contact-form {
-    margin: 4vw;
+    margin: 3vw auto;
     flex-direction: row;
-    min-width: 25vw;
-    max-width: 25vw; }
+    min-width: fit-content;
+    max-width: fit-content;
+    justify-content: center; }
   input {
+    margin: 0.5vh auto;
     justify-self: center;
     min-height: 5vh;
     max-height: 5vh;
     min-width: 25vw;
     max-width: 25vw; }
   textarea {
+    margin: 0.5vh;
     justify-self: center;
     min-height: 2vh;
     max-height: 20vh;
@@ -490,13 +475,9 @@ h2 {
     max-width: 25vw; }
   /* CONTACTO DERECHA */
   .contact-list {
-    margin: 4vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    margin: 10vw auto;
     max-width: 25vw;
-    height: 40vh;
+    height: fit-content;
     text-align: left;
     padding-left: 0; }
   /*---------PORTFOLIO------------*/
