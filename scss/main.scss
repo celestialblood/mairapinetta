@@ -1,9 +1,16 @@
 
+<<<<<<< HEAD
 @import "variables";
 @import "nav&footer";
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@500&display=swap');
 
+=======
+$margin:3vw;
+$padding:4vw;
+$height:60vh;
+$width:60vw;
+>>>>>>> main
 
 *{/*Con esto  elimino lo que esta por defecto y no se me suma a lo que yo setee*/
     margin:0;
@@ -16,6 +23,7 @@
 
     height: $height;
     width: $width;
+<<<<<<< HEAD
     align-content: center;
 }
 
@@ -25,6 +33,11 @@
     color:$colorfont;
 }
 
+=======
+
+    align-content: center;
+}
+>>>>>>> main
 /*----------------MOBILE FIRST------------------*/
 
 /*--------------------HOME-----------------------*/
@@ -262,11 +275,18 @@ textarea, input{
 }
 
 .button-contact{
+<<<<<<< HEAD
 
     @include tipografia( $colorfont, $font);
 
     font-size:large;
     text-align: center;
+=======
+    font-family: 'Dosis', sans-serif;
+    font-size:large;
+    text-align: center;
+    color:#ffff;
+>>>>>>> main
     border-color: #de90ff;
 
     margin: 0.5vh;
@@ -433,6 +453,13 @@ h2{
         
     }
     
+<<<<<<< HEAD
+=======
+    .icon-cart {
+        @extend .icon-insta;
+
+    } 
+>>>>>>> main
     
     body{
         display: flex;
@@ -493,6 +520,10 @@ h2{
         @include container_desktop($height, $width);
 
         text-align: center;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> main
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -510,13 +541,25 @@ h2{
 
 /*--------------------------------------------------------DESKTOP------------------------------------------------------*/
 @media screen and (min-width: 1024px){ 
+<<<<<<< HEAD
 
     .icon-insta, .icon-cart{
+=======
+    .icon-insta{
+>>>>>>> main
         flex-direction: column;
         justify-content: flex-end;
         
     }
     
+<<<<<<< HEAD
+=======
+    .icon-cart { 
+        @extend .icon-insta;
+
+    } 
+    
+>>>>>>> main
 
     body{
         display: flex;

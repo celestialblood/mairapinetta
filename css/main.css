@@ -265,7 +265,13 @@ textarea, input {
   border-color: transparent; }
 
 .button-contact {
+<<<<<<< HEAD
   font-family: "Dosis", sans-serif;
+=======
+  font-family: 'Dosis', sans-serif;
+  font-size: large;
+  text-align: center;
+>>>>>>> main
   color: #ffff;
   font-size: large;
   text-align: center;
