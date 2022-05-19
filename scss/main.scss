@@ -1,12 +1,8 @@
-@import "nav&footer";
-@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@500&display=swap');
 
-$margin:3vw;
-$padding:4vw;
-$height:60vh;
-$width:60vw;
-$font:'Dosis', sans-serif;
-$colorfont:#ffff;
+@import "variables";
+@import "nav&footer";
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@500&display=swap');
 
 
 *{/*Con esto  elimino lo que esta por defecto y no se me suma a lo que yo setee*/
