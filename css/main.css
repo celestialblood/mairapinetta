@@ -301,7 +301,7 @@ textarea, input {
       .contact-list ul li span {
         font-family: 'Dosis', sans-serif;
         color: #ffffff;
-        font: 300 18px;
+        font-size: large;
         letter-spacing: 1.9px;
         margin-left: 2vw; }
       .contact-list ul li:hover {
@@ -342,7 +342,6 @@ textarea, input {
 p {
   font-family: 'Dosis', sans-serif;
   color: #ffffff;
-  font: 300 18px;
   letter-spacing: 1.9px; }
 
 h2 {
