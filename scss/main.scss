@@ -92,7 +92,6 @@ overflow-x: hidden;}
 
 
 .contact{
-    /* background-color: #de90ff; */
     @extend .about;
 } 
 
@@ -310,15 +309,11 @@ textarea, input{
             color: rgb(255, 255, 255);
 
             text-decoration: none;
-           
             span {
-
-                font-family:'Dosis', sans-serif;
                 color: #ffffff;
-                font-size: large;
                 letter-spacing: 1.9px;  
                 margin-left: 2vw;
-        
+                font: 18px 'Dosis', sans-serif;
             }
 
             &:hover{

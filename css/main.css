@@ -140,9 +140,6 @@ body {
   /* background-color: #de90ff; */
   justify-self: center; }
 
-.contact {
-  /* background-color: #de90ff; */ }
-
 .shop {
   /* background-color: #de90ff; */
   align-self: center;
@@ -299,11 +296,10 @@ textarea, input {
       color: white;
       text-decoration: none; }
       .contact-list ul li span {
-        font-family: 'Dosis', sans-serif;
         color: #ffffff;
-        font-size: large;
         letter-spacing: 1.9px;
-        margin-left: 2vw; }
+        margin-left: 2vw;
+        font: 18px 'Dosis', sans-serif; }
       .contact-list ul li:hover {
         color: #de90ff;
         transition: 0.7s; }
