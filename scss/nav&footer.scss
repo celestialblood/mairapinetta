@@ -9,62 +9,62 @@
 
 /*-------TRANSICION--------*/
 
-nav:hover{
-    background-color: #ffffff17;
-    transition-duration:1s ;
-}
 
-header h1{
+nav h1{
     text-transform: uppercase;
     text-decoration: none;
     padding-bottom: 2vh;
     padding-top: 2vh;
 
     @include tipografia( $colorfont, $font);
-    font-weight: 300;
-    font-size:x-large;
+
 }
 
 nav{
-    padding: 1vw;
-    display: flex;
-    flex-wrap: wrap; 
-    flex-direction: column;
-    align-items: center ;
 
-    position: sticky;
-    top: 0;
-}
+    &:hover{
+        background-color: #ffffff17;
+        transition-duration:1s ;
+    }
 
-nav ul{    
-    display: flex;
-    height: fit-content;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
-    list-style: none; 
-    z-index:10;
-}
+    .nav-item a, #navbarScrollingDropdown, .dropdown-item{
+        text-transform: uppercase;
+        text-decoration: none;
+        @include tipografia( $colorfont, $font);
+        font-weight: 300;
+        color: #ffffff;
+        z-index: 110;
+        &:hover {
+            color: #de90ff;
+        }
+        
+    }
 
-nav a {
-    text-transform: uppercase;
-    text-decoration: none;
+    .dropdown-menu{
+        background-color: transparent;
+        color: #ffffff;
+    }
 
-    @include tipografia( $colorfont, $font);
-    font-weight: 300;
+    button{ /*important para sacar el color del borde del button de bootstrap*/
+       color:transparent !important;
+    }
+
 }
 
 a {
     text-decoration: none;
     list-style: none;
     color: #ffffff;
+
+    &:hover {
+        color: #de90ff;
+    }
+
 }
 
-a:hover {
-    color: #de90ff;
+.icon-cart, .icon-insta {
+    display: none;
 }
-
 
 .icon-insta img, .icon-cart img{
     display: flex;
@@ -73,27 +73,38 @@ a:hover {
 
 }
 
+#nav-about{
+    h1{
+        font-size: x-large !important;
+    }
+    font-size: large  !important;
+    padding: 1.5% !important;
+}
+
 
 
 /*-------FOOTER----------*/
 
-footer{
- padding: 1%;
- display: flex;
-
- justify-self: center;
- justify-content: center;
- align-content:space-around;
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    margin-top: 5vh; /*mobile*/
+    text-decoration: none;   
+    justify-content:space-around;
+    align-items:center;
    
-/*mobile*/margin-top: 10vh;
- text-decoration: none;   
+   
+    @include tipografia( $colorfont, $font);
+   
+    p{
+        justify-content: flex-end;
+        margin-top:2vh ;
 
- @include tipografia( $colorfont, $font);
- font-weight: 300;
-
-    img{
-        height: 2.7vh;
-        filter: invert(1);
+        img{
+            height: 2.7vh;
+            filter: invert(1);
+        }
     }
 
     &:hover{
@@ -102,17 +113,19 @@ footer{
     
     }
 
-}
-
-
-/*DESKTOP*/
-@media screen and (min-width: 1024px){ 
-    footer{
-        margin-top: 0;
-        display: flex;
-        justify-self: center;
-        justify-content: center;
-        align-content:space-around;
+    img{
+        max-width: 1.5em;
+        filter: invert(1);
     }
 
+    .fa-twitter, .fa-instagram, .fa-github {
+        align-content: space-around;
+        font-size: 1.8em;
+        &:hover{
+            color: #de90ff;
+            transition: 0.7s;
+        }
+    } 
 }
+
+

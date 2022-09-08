@@ -1,5 +1,5 @@
 <!--Maira Pinetta-->
-<!DOCTYPE html>
+<!DOCTYPE html5> <!--versionHtml-->
 <html lang="en">
 
 <head>
@@ -14,7 +14,7 @@
     <meta name="description" content=" Maira Pinetta, Multimedia Artist and Developer from Argentina">
     
     <!--Icono página-->
-    <link rel="icon" type="icon" href="../Images/address-card-solid.svg">
+    <link rel="icon" type="icon" href="../Assets/address-card-solid.svg">
 
     <!--Link iconos-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
@@ -36,75 +36,90 @@
 
 <body>
 
-    <img id = "background_home" src="../Images/background_Pinetta.jpg" alt="Background_home">
+    <img id = "background_home" src="../Assets/background_Pinetta.jpg" alt="Background_home">
 
-    <nav> <!--barra de navegación-->
+    <nav class="navbar navbar-expand-lg sticky-lg-top  " id="nav-about">
+        <div class="container-fluid">
+            <h1 class="navbar-brand">ABOUT</h1>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <header>
-            <h1>About</h1>
-        </header>
+            <div class="collapse navbar-collapse" id="navbarScroll">
 
-        <ul> <!--lista Navegación -->
-            <li> <!--list item-->
-                <a href="../index.html">Home</a> 
-            </li>
+                <ul class="navbar-nav navbar-nav-scroll w-100 d-flex justify-content-around " style="--bs-scroll-height: 100px;">
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shop.html">Shop</a>
+                    </li>
 
-            <li> <!--list item-->
-                <a href="../Pages/portfolio.html">Portfolio</a> 
-            </li>
+                    <li class="nav-item dropdown">
+                
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Portfolio
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="./portfolio.html#video">Video</a></li>
+                        <li><a class="dropdown-item" href="./portfolio.html#photography">Photography</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="https://teia.art/Celestialblood" target="_blank" >NFT</a></li>
+                        </ul>
 
-            <li>
-                <a href="../Pages/shop.html">Shop</a> 
-            </li>
+                    </li>
 
-            <li>
-                <a href="../Pages/contact.html">Contact</a> 
-            </li>
-  
-        </ul>
-        
- 
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html" >Contact</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
     </nav>
 
-       <main class="container">
+    <main class="container" >
 
-            <div class="row h-100">
-                <div class="col-sm-12 align-self-center">
-                    <div class="card">
+        <div class="row h-100">
+            <div class="col-sm-12 align-self-center">
+                <div class="card">
 
-                        <h2 class="h2-about">ABOUT ME</h2>
+                    <h2 class="h2-about">ABOUT ME</h2>
 
-                        <p> Multimedia artist, Photographer, Designer & Front end Developer 
-                            Based in Bs.As Argentina. 
-                        </p>
-                
-                        <p> For work and collaborations you can contact me at mairapinetta@gmail.com
-                            or via my <a href="../Pages/contact.html"><span>contact form </span></a>.
-                        </p>
-                
-                        <p> 
-                         You can also follow me on my social media to stay updated on my work.
-                        </p>        
-                     
-                    </div>
+                    <p> Multimedia artist, Photographer, Designer & Front end Developer 
+                        Based in Bs.As Argentina. 
+                    </p>
+            
+                    <p> For work and collaborations you can contact me at mairapinetta@gmail.com
+                        or via my <a href="../Pages/contact.html"><span>contact form </span></a>.
+                    </p>
+            
+                    <p> 
+                        You can also follow me on my social media to stay updated on my work.
+                    </p>        
+                    
                 </div>
             </div>
-         
-        </main>
+        </div>
+        
+        <!--ICONOS SOCIAL MEDIA-->
+        <div class="social-media">
 
+            <a href="https://twitter.com/_celestialblood"target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/_celestialblood/"target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="nft" href="https://teia.art/Celestialblood"target="_blank"><img src ="../Assets/nft.png"></img></a>
+            <a href="https://github.com/celestialblood"target="_blank"><i class="fab fa-github"></i></a>
 
-    <!--ICONOS SOCIAL MEDIA-->
-    <div class="social-media">
+        </div>
 
-        <a href="https://twitter.com/_celestialblood"target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/_celestialblood/"target="_blank"><i class="fab fa-instagram"></i></a>
-        <a class="nft" href="https://teia.art/Celestialblood"target="_blank"><img src ="../Images/nft.png"></img></a>
-        <a href="https://github.com/celestialblood"target="_blank"><i class="fab fa-github"></i></a>
-    
-    </div>
+    </main>
 
     <footer>
-        <p>Copyright &copy; 2022    <span>   Maira Pinetta</span>. <img src="../Images/pluto.png"></p>
+        <p>Copyright &copy; 2022    <span>   Maira Pinetta</span>. <img src="../Assets/pluto.png"></p>
     </footer>
 
    <script src="https://kit.fontawesome.com/53cd0afe9d.js" crossorigin="anonymous"></script> 

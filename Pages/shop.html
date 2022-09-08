@@ -13,59 +13,112 @@
     <meta name="description" content="Prints and nfts available">
     
     <!--Icono página-->
-    <link rel="icon" href="../Images/cart-shopping-solid.svg">
+    <link rel="icon" href="../Assets/cart-shopping-solid.svg">
 
-    <!--Linkf iconos-->
+    <!--linkg font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <script src="https://kit.fontawesome.com/53cd0afe9d.js" crossorigin="anonymous" defer></script> 
 
-    <!--LINK a BOOTSTRAP-----Se pone ANTES de mi CSS Para que no me lo pise --> 
+    <!--PASAR LIBRERIA A LOCAL-->
+
+    <!--LINK a BOOTSTRAP e iconos bootstrap -----Se pone ANTES de mi CSS Para que no me lo pise --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!--llamo css-->
-    <link rel="stylesheet" href="../css/main.css">
- 
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--EL DEFER HACE QUE NO SE EJECUTE HASTA QUE SE CARGE TODO EL HTML si trabajo con DOM  poner esto si no va a tardar en ejecutaarse el dom -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script> 
 
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+    <!--font google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <!--llamo css-->
+    <link rel="stylesheet" href="../css/main.css">
 
     <title>Shop</title>
 </head>
 
 <body>
 
-    <img id = "background_home" src="../Images/background_Pinetta.jpg" alt="Background_home">
+    <img id = "background_home" src="../Assets/background_Pinetta.jpg" alt="Background_home">
 
-    <nav>
+    <nav class="navbar navbar-expand-lg sticky-lg-top  ">
+        <div class="container-fluid">
+            <h1 class="navbar-brand">Shop</h1>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <header>
-            <h1>Shop</h1>
-        </header>   
-
-        <ul> <!--lista Navegación -->
-            <li> <!--list item-->
-                <a href="../index.html">Home</a> 
-            </li>
-
-            <li> <!--list item-->
-                <a href="../Pages/portfolio.html">Portfolio</a> 
-            </li>
-
-            <li>
-                <a href="../Pages/about.html">About</a> 
-            </li>
-
-            <li>
-                <a href="../Pages/contact.html">Contact</a> 
-            </li>
-            <div class="icon-cart">
+            <div class="icon-cart-mobile">
                 <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>   
             </div>  
-        </ul>
 
- 
+            <div class="collapse navbar-collapse" id="navbarScroll">
 
+                <ul class="navbar-nav navbar-nav-scroll w-100 d-flex justify-content-around " style="--bs-scroll-height: 100px;">
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Portfolio
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="./portfolio.html#video">Video</a></li>
+                        <li><a class="dropdown-item" href="./portfolio.html#photography">Photography</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="https://teia.art/Celestialblood" target="_blank">NFT</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html" >About</a>
+                    </li>
+
+                    <li class="cart-box">
+
+                        <div class="icon-cart">
+                            <a href="#"><i id="icon-empty" class="fa-solid fa-cart-shopping"></i></a>   
+                            <a href="#"><i id="icon-full" class="iconhidden fa-solid fa-cart-arrow-down"></i></a>   
+                            <div id="cart-total" class="num">0</div>
+                        </div> 
+
+                        <div class="whole-cart-window hide-it">
+                            <h2 class="cart-title">CART</h2>
+                            <div id="cartWrapper" class="cart-wrapper">
+                                <!--productos-->
+                                
+                            </div>
+                            <div id="subtotal" class="subtotal">Subtotal: $0.00</div>
+                            <div class="checkout">Checkout</div>
+                            <!-- <div class="view-cart">View Cart</div> -->
+                        </div>
+                        
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
     </nav>
+
+            
+    
 
     <main class="main-shop">
 
@@ -81,52 +134,61 @@
 
             <tbody>
                 <tr>
-                    <td> A4 </td> <!--Contenido tabla fila-->
-                    <td> $400 AR</td>
+                    <td><button class="buttonProduct" id="A4" data-size ="A4"> A4 </button></td> <!--Contenido tabla fila-->
+                    <td> $1000 AR</td>
                 </tr>
                 <tr>
-                    <td> A3 </td>
-                    <td>$1000 AR</td>
+                    <td><button class="buttonProduct" id="A3" data-size ="A3"> A3 </button></td>
+                    <td>$1500 AR</td>
                 </tr>
             </tbody>
         </table>
 
-        <!--Galeria sin bootstrap-->
-        <div class="prints">
-            <img class="horizontal" src="../Images/Print.jpg" alt="Print_shop" >
-            <img class="vertical" src="../Images/Pinetta_Maira_6974.jpg">
-            <img class= "vertical" src="../Images/MairaPinetta_Balam5.jpg" alt="">       
+        <!--Galeria desktop-->
+        <div id="box-container-shop" class="box-container">
+
+          <!--los box de productos estan en el js -->
+         
         </div>
 
 
-       <!--Gallery carrousel BOOTSTRAP -->
+       <!--Gallery carrousel BOOTSTRAP  MOBILE-->
        <div id="carouselExampleCaptions" class="carousel slide carousel-shop" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
             </div>
             <div class="carousel-inner ">
                 
                 <div class="carousel-item active">
-                    <img src="../Images/Print.jpg" class="" alt="...">
+                    <img src="../Assets/Print.jpg" class="" alt="...">
                     <div class="carousel-caption  d-md-block">
-                        <h5>Print</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5>Sensitive</h5>
+                        <p>2019</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../Images/Pinetta_Maira_6974.jpg" class=" " alt="...">
+                    <img src="../Assets/A5_edit2.jpg" class=" " alt="...">
                     <div class="carousel-caption  d-md-block">
-                        <h5>6974</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                        <h5>Hidden place</h5>
+                        <p>.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../Images/Pinetta_Maira__DSC1365.jpg" class="" alt="...">
+                    <img src="../Assets/Pinetta_Maira_6974.jpg" class=" " alt="...">
+                    <div class="carousel-caption  d-md-block">
+                        <h5>Anhelo</h5>
+                        <p>2019</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Assets/Pinetta_Maira__DSC1365.jpg" class="" alt="...">
                     <div class="carousel-caption d-md-block">
-                        <h5>DSC1365</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                        <h5>Shibari Doll</h5>
+                        <p>2018</p>
                     </div>
                 </div>
             </div>
@@ -147,14 +209,24 @@
     </main>
     
     <footer>
-        <p>Copyright &copy; 2022    <span>   Maira Pinetta</span>. <img src="../Images/pluto.png"></p>
-    </footer>
 
-    <script src="https://kit.fontawesome.com/53cd0afe9d.js" crossorigin="anonymous"></script> 
+        <a href="https://twitter.com/_celestialblood"target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/_celestialblood/"target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/celestialblood"target="_blank"><i class="fab fa-github"></i></a>
+        <a class= "nft-footer" href="https://teia.art/Celestialblood" target="_blank"><img src="../Assets/nft.png"></img></a>
+        
+        <p>Copyright &copy; 2022    <span>   Maira Pinetta</span>. <img src="../Assets/pluto.png"></p>
+    
+    </footer>
+     
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
     <!--link a JS de BOOTSTRAP------Se pone en la ultima parte para que se ejecute después de cargar la página por Optimización-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-
+    <!--link a mi js -->
+    <script src="../js/main.js"></script>   
+    
 </body>
-</html>
+</html> 
